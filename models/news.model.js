@@ -53,7 +53,7 @@ NewsModel.prototype.getHit = function(content_id, callback){
 };
 
 NewsModel.prototype.getAllContentHit = function(callback){
-    var query = connection.query("select content_id, hit from td_content_hit where content_id", function(err, rows, field) {
+    var query = connection.query("select content_id, hit from td_content_hit", function(err, rows, field) {
         var response;
         if (err) {
             response = {
